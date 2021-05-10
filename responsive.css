@@ -1,0 +1,574 @@
+@media screen and (max-width:896px){
+  /* ハンバーガーメニューのCSS */
+
+  .menu-btn {
+    position: fixed;
+    top: 0; /* 上からの距離 */
+    right: 0; /* 右からの距離 */
+    display: flex; 
+    height: 45px; /* ハンバーガーメニューの背景の高さ */
+    width: 45px; /* ハンバーガーメニューの背景の幅 */
+    justify-content: center; /* 三本線の左右の中央寄せ */
+    align-items: center; /* 三本線の上下の中央寄せ */
+    z-index: 90; /* 被った時に上に表示されるように */
+    background-color: #707070; /* ハンバーガーメニューの背景色 */
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px; /* 三本線の上下幅 */
+    width: 25px; /* 三本線の左右幅 */
+    border-radius: 3px; /* 三本線の丸み */
+    background-color: #ffffff; /* 三本線の色 */
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px; /* 真ん中の線を起点とした時の一番上の線の距離 */
+  }
+  .menu-btn span:after {
+    top: 8px;  /* 真ん中の線を起点とした時の一番下の線の距離 */
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);/* 押したら回転する */
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);/* 押したら回転する */
+  }
+
+  #menu-btn-check {
+    display: none;
+  }
+
+  /* ここから、ハンバーガーメニューを押したら表示されるメニューのCSS */
+
+  .menu-content {
+    width: 100%; /* メニューの横幅 */
+    height: 100%; /* メニューの縦幅 */
+    position: fixed;
+    top: 0;
+    left: 100%;/* leftの値を変更してメニューを画面外へ */
+    z-index: 80;
+    background-color: #464646;/* メニューの背景色 */
+    transition: all 0.5s;/* メニューが現れる秒数 */
+  }
+
+  .menu-content ul {
+    padding: 70px 10px 0; /* メニュー全体の余白 */
+  }
+
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff; /* メニューの下線 */
+    list-style: none;
+  }
+
+  .menu-content ul li a { /* メニューの文字のCSS */
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+  .menu-content ul li a::before { /* メニューの矢印のCSS */
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+
+  #menu-btn-check:checked ~ .menu-content {
+    left: 0;/*ハンバーガーメニューを押したら、メニューを画面内へ*/
+  }
+  /* ここまで、ハンバーガーメニューのCSS */
+
+
+  .nav {
+    display: none;
+  }
+
+  .head-lock {
+    padding: 0;
+    height: 45px;
+  }
+
+  .back-color-f5f3ee {
+    display: none;
+  }
+
+  .entry-header img {
+    height: 15.5rem;
+    margin-top: 4rem;
+  }
+
+  h1 span {
+    display: block;
+    font-size: 2.1rem;
+  }
+
+.main2 {
+    height: 220px;
+    margin-top: -4px;
+  }
+
+  .main2 h2 {
+    font-size: 3.6rem;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    letter-spacing: 6px;
+  }
+
+  .main4 h2 {
+    padding: 4rem;
+    margin: 2rem 0;
+  }
+
+  .main5 h3 {
+    margin: 4rem 0;
+  }
+
+  .main6 {
+    font-size: 1.4em;
+  }
+
+  .main7 {
+    padding: 8rem 0;
+  }
+
+  .main10-items {
+    font-size: 1.2rem;
+  }
+
+  .main10-h3 {
+    margin: 6rem 0;
+  }
+
+  .main10-items img {
+    height: 42rem;
+  }
+
+  .main10 {
+    margin-bottom: 4rem;
+  }
+
+  .main11 {
+    padding: 7rem 0;
+    height: 40rem;
+  }
+
+  .site-link {
+    display: none;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .company-overview {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cr {
+    text-align: center;
+    margin: 38px 25px 30px 0;
+  }
+  
+  .top-return img {
+    width: 6.6rem;
+  }
+
+  .top-return {
+    bottom: 7%;
+  }
+
+  .cr {
+    color: #d4d7d8;
+  }
+
+}
+
+@media screen and (max-width:480px){
+  /* ハンバーガーメニューのCSS */
+
+  .menu-btn {
+    position: fixed;
+    top: 0; /* 上からの距離 */
+    right: 0; /* 右からの距離 */
+    display: flex; 
+    height: 60px; /* ハンバーガーメニューの背景の高さ */
+    width: 60px; /* ハンバーガーメニューの背景の幅 */
+    justify-content: center; /* 三本線の左右の中央寄せ */
+    align-items: center; /* 三本線の上下の中央寄せ */
+    z-index: 90; /* 被った時に上に表示されるように */
+    background-color: #464646; /* ハンバーガーメニューの背景色 */
+  }
+  .menu-btn span,
+  .menu-btn span:before,
+  .menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px; /* 三本線の上下幅 */
+    width: 25px; /* 三本線の左右幅 */
+    border-radius: 3px; /* 三本線の丸み */
+    background-color: #ffffff; /* 三本線の色 */
+    position: absolute;
+  }
+  .menu-btn span:before {
+    bottom: 8px; /* 真ん中の線を起点とした時の一番上の線の距離 */
+  }
+  .menu-btn span:after {
+    top: 8px;  /* 真ん中の線を起点とした時の一番下の線の距離 */
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);/* 押したら回転する */
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);/* 押したら回転する */
+  }
+
+  #menu-btn-check {
+    display: none;
+  }
+
+  /* ここから、ハンバーガーメニューを押したら表示されるメニューのCSS */
+
+  .menu-content {
+    width: 100%; /* メニューの横幅 */
+    height: 100%; /* メニューの縦幅 */
+    position: fixed;
+    top: 0;
+    left: 100%;/* leftの値を変更してメニューを画面外へ */
+    z-index: 80;
+    background-color: #464646;/* メニューの背景色 */
+    transition: all 0.5s;/* メニューが現れる秒数 */
+  }
+
+  .menu-content ul {
+    padding: 70px 10px 0; /* メニュー全体の余白 */
+  }
+  
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff; /* メニューの下線 */
+    list-style: none;
+  }
+
+  .menu-content ul li a { /* メニューの文字のCSS */
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+  .menu-content ul li a::before { /* メニューの矢印のCSS */
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+
+  #menu-btn-check:checked ~ .menu-content {
+    left: 0;/*ハンバーガーメニューを押したら、メニューを画面内へ*/
+  }
+  /* ここまで、ハンバーガーメニューのCSS */
+  
+  .head-lock, .main6, .main7 ul, .cv-btn, .main10-list, .main11-list {
+    width: 100%;
+  }
+
+  .head-lock {
+    height: 43px;
+  }
+
+  .title a {
+    width: 20rem;
+    height: 6rem;
+    font-size: 2.2rem;
+    background-repeat: no-repeat;
+  }
+
+  .menu-btn {
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 72px;
+    width: 72px;
+  }
+
+  .title a {
+    width: 12rem;
+    height: 4rem;
+  }
+
+  .menu-btn {
+    height: 43px;
+    width: 43px;
+  }
+
+  h1 span {
+    font-size: 2.1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .entry-header img {
+    height: 8.5rem;
+  }
+
+  .entry-header h1 {
+    padding: 7px 0;
+  }
+
+  .main2 h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  .main3 {
+    padding: 4rem 0;
+  }
+
+  .main3 h2 {
+    font-size: 2.4rem;
+  }
+
+  .main3-list {
+    /* display: flex; */
+    flex-direction: column;
+  }
+
+  .main3-list li {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    width: 320px;
+  }
+
+  .main3-list li:first-child {
+    margin-bottom: 1rem;
+  }
+
+  .main4 h2 {
+    padding: 2.5rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    letter-spacing: .1em;
+  }
+
+  .main5 h3 {
+    margin: 4rem 0 2rem;
+  }
+
+  .main5 h3 {
+    font-size: 2.2rem;
+  }
+
+  .main6 img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 8px;
+  }
+
+  .main6 {
+    flex-direction: column;
+    padding: 0 40px;
+  }
+
+  .main7 {
+    padding: 4rem 0 1rem;
+  }
+
+  .main7 h2 {
+    font-size: 2rem;
+    letter-spacing: .2em;
+  }
+
+  .main7 ul {
+    /* display: flex; */
+    flex-direction: column;
+  }
+
+  .main7-list p img {
+    width: 52%;
+  }
+
+  .main7-list {
+    width: 100%;
+    position: relative;
+  }
+
+  .main7-list p img {
+    width: 39%;
+  }
+
+  .main7-list p {
+    min-height: 38px;
+  }
+
+  .main7-list p {
+    padding-bottom: 1.2em;
+    font-size: 1.3rem;
+  }
+
+  .position span {
+    /* position: absolute; */
+    top: 5px;
+    left: 36%;
+  }
+
+  .main7-list div {
+    font-size: 1.5rem;
+    width: 71%;
+    margin: 0 auto 3rem;
+  }
+
+  .main7-list p br {
+    display: none;
+  }
+
+  .sp-center {
+    text-align: center;
+  }
+
+  .main8 {
+    padding: 40px 0;
+  }
+
+  .b {
+    font-size: 1.6rem;
+  }
+
+  .cv-btn a {
+    font-size: 2.4rem;
+    padding: 12px 0 12px;
+    margin: 0 2rem;
+  }
+
+  .main9 h2 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    padding: 40px 0 30px;
+  }
+
+  .main9 h2::after {
+    /* position: absolute; */
+    top: 55%;
+    /* left: 50%; */
+  }
+
+  .main10-h3 {
+    margin: 5rem 0 3rem;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    line-height: 1.2;
+  }
+
+  .main10-list {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main10-items {
+    width: 100%;
+  }
+
+  .main10-list {
+    width: 70%;
+  }
+
+  .main10-items img {
+    height: 37rem;
+  }
+
+  .main11-h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main11 {
+    padding: 3rem 0;
+    height: 45rem;
+  }
+
+  .main11-list {
+    width: 62%;
+  }
+
+  .main11-items {
+    font-size: 2rem;
+    line-height: 2.5;
+  }
+
+  .mp {
+    display: inline-block;
+    margin-left: 3rem;
+    padding-top: 1.5rem;
+  }
+
+  .fa-check-circle:before {
+    /* content: "\f058"; */
+    font-size: 2.5rem;
+  }
+
+  .company-name {
+    line-height: 3em;
+  }
+
+  .address {
+    text-align: left;
+    color: #d4d7d8;
+  }
+
+  .footer-block {
+    padding: 45px 35px 30px;
+  }
+
+  .flex {
+    margin-bottom: 2rem;
+  }
+
+}
